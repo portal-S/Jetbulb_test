@@ -1,10 +1,9 @@
 package com.portal.jetbulb;
 
-import com.oracle.jrockit.jfr.InvalidValueException;
-
 public class NotationConverter {
     public int toArabic(String romanNotation) throws InvalidValueException {
-        if (romanNotation.equals("") || (!romanNotation.replaceAll("[IVXLCDM]", "").equals(""))) throw new InvalidValueException("String must contain only valid roman numerals");
+        if (romanNotation == null || romanNotation.equals("") || (!romanNotation.replaceAll("[IVXLCDM]", "").equals(""))) throw new InvalidValueException("String must contain only valid roman numerals [I, V, X, L, C, D, M]");
+
         char[] chars = romanNotation.toCharArray();
         int sum = 0;
         for (int i = chars.length - 1; i >= 0; i-=2){
