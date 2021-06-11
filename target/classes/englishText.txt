@@ -1,0 +1,7 @@
+ReflectionTestUtils is a collection of reflection-based utility methods. You can use these methods in testing scenarios where you need to change the value of a constant, set a non-public field, invoke a non-public setter method, or invoke a non-public configuration or lifecycle callback method when testing application code for use cases such as the following:
+
+ORM frameworks (such as JPA and Hibernate) that condone private or protected field access as opposed to public setter methods for properties in a domain entity.
+
+Spring’s support for annotations (such as @Autowired, @Inject, and @Resource), that provide dependency injection for private or protected fields, setter methods, and configuration methods.
+
+Use of annotations such as @PostConstruct and @PreDestroy for lifecycle callback methods.
